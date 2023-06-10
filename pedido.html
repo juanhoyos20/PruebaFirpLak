@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/formulario.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="lista log"> <img src="./imagenes/logo.png" alt="" class="logop"> </li>
+                <li class="lista"><a href="index.html">Inicio</a></li>
+                <li class="lista lista-r"><a href="Ingreso.html">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Número pedido</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese número de pedido">
+          <small id="emailHelp" class="form-text text-muted">Este número lo encuentra en la guía</small>
+        </div>
+        <input type="button" onclick="location.href='pedido.html';" value="Enviar" />
+      </form>
+      <article class="my-3" id="card">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+          
+        </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Pedido</h5>
+                  <p class="card-text">Aquí encuentra el estado del pedido.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Su pedido está: en proceso</li>
+                  <li class="list-group-item">Se encuentra en la ciudad de destino</li>
+                  <li class="list-group-item">Fecha de entrega estimada: 4:30 pm</li>
+                </ul>
+                <div class="card-body">
+                    <input type="button" onclick="location.href='pedido.html';" value="Cambiar estado" />
+                  <input type="button" onclick="location.href='entrega.html';" value="registrar entrega" />
+                </div>
+              </div>
+            </div>
+
+  
+        </div>
+      </article>
