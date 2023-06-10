@@ -160,6 +160,32 @@
 
 </body>
 
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBKcPhIU4jw04sqpWq_x7Zi4r4dW1PU5oM",
+    authDomain: "prueba-firplak.firebaseapp.com",
+    projectId: "prueba-firplak",
+    storageBucket: "prueba-firplak.appspot.com",
+    messagingSenderId: "276166925012",
+    appId: "1:276166925012:web:6b52eeb20948de6286b941",
+    measurementId: "G-25MESHY7CR"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+  var usuario =document.getElementById('exampleInputEmail1');
+  var dbRef= firebase.database().ref().child('text');
+  dbRef.on('value', snap => usuario.innerText=snap.val());
+  </script>
 
 </html>
