@@ -18,24 +18,65 @@
         </nav>
     </header>
 
-    <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Nombre cliente</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre de cliente">
-          <small id="emailHelp" class="form-text text-muted"></small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Numero de pedido</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese numero de pedido">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Ingrese fotografía de la guía firmada por el cliente</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
+   
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
 
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Ingrese fotografía del pedido entregado al cliente</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
+            
+                <div class="form-group">
+                  <label for="exampleFormControlFile1">Adjuntar guía firmada</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Adjuntar fotografía</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  </div>
+            
+            <button class="btn btn-primary" onclick="enviar()">Enviar</button>
+          </form>
+      
+      
+      
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBKcPhIU4jw04sqpWq_x7Zi4r4dW1PU5oM",
+      authDomain: "prueba-firplak.firebaseapp.com",
+      databaseURL: "https://prueba-firplak-default-rtdb.firebaseio.com",
+      projectId: "prueba-firplak",
+      storageBucket: "prueba-firplak.appspot.com",
+      messagingSenderId: "276166925012",
+      appId: "1:276166925012:web:6b52eeb20948de6286b941",
+      measurementId: "G-25MESHY7CR"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+
+<script src="./enviar.js"></script>
+</html>
